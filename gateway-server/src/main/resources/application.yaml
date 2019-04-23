@@ -1,0 +1,15 @@
+spring.cloud.gateway:
+  routes:
+    - id: bank
+      uri: lb://bank-info-service
+      predicates:
+        - Path=/api/bank/**
+      filters:
+        - RewritePath=/api/(?<segment>.*), /$\{segment}
+    - id: account
+      uri: lb://account-service
+      predicates:
+        - Path=/api/account/**,/api/accounts/**
+      filters:
+        - RewritePath=/api/(?<segment>.*), /$\{segment}
+

@@ -98,7 +98,7 @@
 ### Checkout code and run bat file:
 
 ```
-git clone https://github.com/smava/Sergiy-Pavlenko.git
+git clone https://pavlser/msa-demo-app.git
 
 cd Sergiy-Pavlenko
 
